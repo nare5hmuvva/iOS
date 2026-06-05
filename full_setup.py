@@ -9,11 +9,13 @@
 import subprocess, sys, time, paramiko, os
 from pathlib import Path
 
-IPHONE_IP  = '192.168.29.44'
-USB_PORT   = 2224
+import sys as _sys; _sys.path.insert(0, str(Path(__file__).parent))
+from config_loader import cfg as _cfg
+IPHONE_IP  = _cfg['IPHONE_IP'] or '192.168.1.50'
+USB_PORT   = int(_cfg.get('SSH_FORWARD_PORT', '2224'))
 MOBILE_PWD = 'one'
 ROOT_PWD   = 'alpine'
-IPA_PATH   = Path(r'c:\Users\muvva\Desktop\iOS_Project') / 'DVIA-v2.ipa'
+IPA_PATH   = Path(__file__).parent / 'DVIA-v2.ipa'
 
 # ── helpers ───────────────────────────────────────────────────────────────────
 def start_fwd(port):

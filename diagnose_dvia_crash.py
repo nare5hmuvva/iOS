@@ -1,7 +1,9 @@
 ﻿"""Diagnose DVIA-v2 crash on launch â€” connects via direct WiFi IP."""
 import sys, time, paramiko
 
-IPHONE_IP = '192.168.29.44'
+import sys as _sys, os as _os; _sys.path.insert(0, str(__import__('pathlib').Path(__file__).parent))
+from config_loader import cfg as _cfg
+IPHONE_IP = _cfg['IPHONE_IP'] or '192.168.1.50'
 PORT      = 22
 USER      = 'mobile'
 PASSWD    = 'one'

@@ -1,4 +1,5 @@
-path = r'c:\Users\muvva\Desktop\iOS_Project\ios-pentest-lab\dashboard\app.py'
+from pathlib import Path
+path = str(Path(__file__).parent / 'ios-pentest-lab' / 'dashboard' / 'app.py')
 content = open(path, encoding='utf-8').read()
 
 # Replace curly/smart quotes with ASCII equivalents (these cause SyntaxError in docstrings)

@@ -10,7 +10,7 @@ DEBS = {
     'frida.deb':   'https://github.com/frida/frida/releases/download/16.7.19/frida-server_16.7.19_iphoneos-arm64.deb',
 }
 
-TMP = Path(r'c:\Users\muvva\Desktop\iOS_Project\tmp_debs')
+TMP = Path(__file__).parent / 'tmp_debs'
 TMP.mkdir(exist_ok=True)
 
 # ── 1. Download debs on Windows ───────────────────────────────────────────────
