@@ -5,11 +5,11 @@ from pathlib import Path
 USB_PORT   = 2224
 MOBILE_PWD = 'one'
 
-# Find DVIA IPA on Windows
+home = Path.home()
 IPA_SEARCH_DIRS = [
-    r'c:\Users\muvva\Desktop',
-    r'c:\Users\muvva\Downloads',
-    r'c:\Users\muvva\Desktop\iOS_Project',
+    home / 'Desktop',
+    home / 'Downloads',
+    Path(__file__).parent,
 ]
 ipa_path = None
 for d in IPA_SEARCH_DIRS:

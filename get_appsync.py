@@ -88,10 +88,10 @@ try:
         'AppSync dylib')
 
     # ── Try pymobiledevice3 install (bypasses signing for dev mode) ──────────
-    print('\n=== Check DVIA IPA path on Windows ===')
-    # DVIA IPA should be somewhere
+    print('\n=== Check DVIA IPA path ===')
     import os
-    base = r'c:\Users\muvva\Desktop\iOS_Project'
+    from pathlib import Path as _P
+    base = _P(__file__).parent
     for root_d, dirs, files in os.walk(base):
         for f in files:
             if 'dvia' in f.lower() or 'DVIA' in f:
