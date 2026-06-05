@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs & temp output
+mitm_stdout.txt
+mitm_stderr.txt
+mitm_token.txt
+mitmweb.log
+mitmweb.log.err
+*.log
+*.log.err
+
+# Large binary packages (download separately)
+*.deb
+*.ipa
+
+# Claude Code local settings
+.claude/
+
+# Relay config contains real IPs / SSH key paths — use config.env.example instead
+ios-pentest-lab/relay/config.env
+
+# Uploads temp dir
+/tmp/
